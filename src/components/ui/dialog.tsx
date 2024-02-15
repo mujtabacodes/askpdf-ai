@@ -9,15 +9,15 @@ import { cn } from "@/lib/utils"
 const Dialog = DialogPrimitive.Root
 
 const DialogTrigger = DialogPrimitive.Trigger
-interface DialogPortalProps extends DialogPrimitive.DialogPortalProps {
-  className?: string;
-}
 
-const DialogPortal = ({
-  className,
-  ...props
-}: DialogPortalProps) => (
-  <DialogPrimitive.Portal className={cn(className)} {...props} />
+// const DialogPortal = ({
+//   className,
+//   ...props
+// }: DialogPrimitive.DialogPortalProps) => (
+//   <DialogPrimitive.Portal className={cn(className)} {...props} />
+// )
+const DialogPortal = (props: DialogPrimitive.DialogPortalProps) => (
+  <DialogPrimitive.Portal {...props} />
 )
 DialogPortal.displayName = DialogPrimitive.Portal.displayName
 
