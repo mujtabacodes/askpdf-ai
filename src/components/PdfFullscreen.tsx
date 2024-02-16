@@ -18,7 +18,7 @@ interface PdfFullscreenProps {
 const PdfFullscreen = ({ fileUrl }: PdfFullscreenProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [numPages, setNumPages] = useState<number>()
-
+  console.log("Helo from PdfFullscreen")
   const { toast } = useToast()
 
   const { width, ref } = useResizeDetector()
