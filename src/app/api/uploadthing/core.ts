@@ -96,7 +96,7 @@ const onUploadComplete = async ({
 
     // vectorize and index entire document
     const pinecone = await getPineconeClient()
-    const pineconeIndex = pinecone.Index('Chatbot')
+    const pineconeIndex = pinecone.Index('quill')
 
     const embeddings = new OpenAIEmbeddings({
       openAIApiKey: process.env.OPENAI_API_KEY,
