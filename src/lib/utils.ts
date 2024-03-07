@@ -9,10 +9,14 @@ export function cn(...inputs: ClassValue[]) {
 export function absoluteUrl(path: string) {
   if (typeof window !== 'undefined') return path
   if (process.env.VERCEL_URL)
-    return `https://${process.env.VERCEL_URL}${path}`
+    return `${process.env.LIVE_URL}${path}`
   return `http://localhost:${
     process.env.PORT ?? 3000
   }${path}`
+  return `https://quill-chatwithpdf.vercel.app:${
+    process.env.PORT ?? 3000
+  }${path}`
+  
 }
 
 export function constructMetadata({
@@ -45,7 +49,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@joshtriedcoding"
+      creator: "@mujtabacodes"
     },
     icons,
     // metadataBase: new URL('https://quill-jet.vercel.app'),
