@@ -97,7 +97,7 @@ export const appRouter = router({
             {
               price: PLANS.find(
                 (plan) => plan.name === 'Pro'
-              )?.price.priceIds.test,//production need to change 9:33:00
+              )?.price.priceIds.test,//production need to change 
               quantity: 1,
             },
           ],
@@ -105,7 +105,7 @@ export const appRouter = router({
             userId: userId,
           },
         })
-
+      
       return { url: stripeSession.url }
     }
   ),

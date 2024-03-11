@@ -9,6 +9,7 @@ const UpgradeButton = () => {
   const {mutate: createStripeSession} = trpc.createStripeSession.useMutation({
     onSuccess: ({url}) => {
       window.location.href = url ?? "/dashboard/billing"
+      console.log('redirecting to', url)
     }
   })
 
