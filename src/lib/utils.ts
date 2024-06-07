@@ -13,15 +13,15 @@ export function absoluteUrl(path: string) {
   return `http://localhost:${
     process.env.PORT ?? 3000
   }${path}`
-  return `https://quill-chatwithpdf.vercel.app:${
+  return `https://askpdf.mujtabacodes.com:${
     process.env.PORT ?? 3000
   }${path}`
   
 }
 
 export function constructMetadata({
-  title = "Quill - the SaaS for students",
-  description = "Quill is an open-source software to make chatting to your PDF files easy.",
+  title = "AskPDF - Chat with PDFs",
+  description = "AskPDF is to make easy chatting to your PDF files easy.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false
@@ -53,7 +53,7 @@ export function constructMetadata({
     },
     icons,
     // metadataBase: new URL('https://quill-jet.vercel.app'),
-    metadataBase: new URL('https://quill-chatwithpdf.vercel.app'),
+    metadataBase: new URL('https://askpdf.mujtabacodes.com'),
     themeColor: '#FFF',
     ...(noIndex && {
       robots: {
